@@ -3,6 +3,7 @@ package com.db1start;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class Lista {
 	private List<String> listacores = new ArrayList<>();
@@ -53,5 +54,17 @@ public class Lista {
 	
     
     //Método que receba uma lista de números e retorne um mapa com listas de números pares e impares
-
+	public Map<Integer, String> mapeiaNumeros(Map<Integer, String> mapa, Integer[] valores) {
+		Integer i= 0;
+		
+		for(i = 0; i < 4; i++) {
+			if(valores[i] % 2 == 0)
+				mapa.put(valores[i], "PAR");
+			else
+				mapa.put(valores[i], "IMPAR"); 
+		}
+		
+		return mapa;
+	}	
+	
 }
